@@ -19,3 +19,4 @@ footer{background:var(--teal);color:#d8dfe1;text-align:center;padding:24px 16px;
 @media(max-width:600px){h1{font-size:1.8rem}}
 .hero .note{font-size:.85rem;opacity:.8;margin-top:6px}footer .disclaimer{max-width:760px;margin:0 auto 8px;font-size:.82rem;line-height:1.45}footer .disclaimer a{color:var(--gold)}
 .card h3{display:flex;align-items:center;gap:10px}.card .logo{width:32px;height:32px;flex:none;border-radius:8px;object-fit:contain;background:#fff}.card .logo.ph{display:inline-flex;align-items:center;justify-content:center;background:#8a9599;color:#fff;font-size:.75rem;font-weight:700}
+header{gap:12px}header .add-btn{margin-left:auto}.add-btn{display:inline-block;background:var(--gold);color:#10282d!important;font-weight:700;padding:8px 14px;border-radius:999px;text-decoration:none;white-space:nowrap}.add-btn:hover{filter:brightness(1.08)}footer .contrib{margin:10px 0}footer .contrib a:not(.add-btn){color:var(--gold)}
