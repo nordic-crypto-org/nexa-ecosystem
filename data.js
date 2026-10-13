@@ -46,7 +46,6 @@ const ENTRIES=[
 ["developers", "wallet-sdk-ts", "TypeScript wallet SDK for Nexa.", "https://gitlab.com/nexa/wallet-sdk-ts", "nexa"],
 ["developers", "Testnet faucet", "Get free testnet NEXA for development.", "https://testnet-faucet.nexa.org/", "nexa"],
 ["developers", "Mainnet faucet", "Small amounts of NEXA to try the network.", "https://faucet.nexa.org", "nexa"],
-["developers", "Nexa dev Matrix", "Developer chat on Matrix.", "https://matrix.to/#/#nexa-dev:matrix.org", "matrix"],
 ["developers", "CashLib", "C++ source and headers for Nexa development (in the full node repo).", "https://gitlab.com/nexa/nexa/-/tree/dev/src/cashlib", "nexa"],
 ["developers", "Nexa AI skills", "Skills corpus that helps AI coding agents write correct, secure Nexa code (Kotlin Multiplatform focus).", "https://gitlab.com/nexa/nexaaiskills", "nexa"],
 ["developers", "Nexa Developer Support", "Telegram group for Nexa developer questions and help.", "https://t.me/nexa_dev", "nexa"],
