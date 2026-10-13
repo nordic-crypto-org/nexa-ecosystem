@@ -49,6 +49,7 @@ const ENTRIES=[
 ["developers", "Nexa dev Matrix", "Developer chat on Matrix.", "https://matrix.to/#/#nexa-dev:matrix.org", "matrix"],
 ["developers", "CashLib", "C++ source and headers for Nexa development (in the full node repo).", "https://gitlab.com/nexa/nexa/-/tree/dev/src/cashlib", "nexa"],
 ["developers", "Nexa AI skills", "Skills corpus that helps AI coding agents write correct, secure Nexa code (Kotlin Multiplatform focus).", "https://gitlab.com/nexa/nexaaiskills", "nexa"],
+["developers", "Nexa Developer Support", "Telegram group for Nexa developer questions and help.", "https://t.me/nexa_dev", "nexa"],
 ["tokens", "NiftyArt", "Create and trade NFTs on Nexa.", "https://niftyart.cash/", ""],
 ["tokens", "Otoplo Tokenize", "Tool to create Nexa tokens.", "https://release.otoplo.com/tokenize/1.0.0/", "otoplo"],
 ["tokens", "Spaceport", "Nexa token and NFT tooling by 137.", "https://spaceport.onethirtyseven.dev/", ""],
