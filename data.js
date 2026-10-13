@@ -12,6 +12,7 @@ const ENTRIES=[
 ["explorers", "Nexa Explorer", "Official block explorer for the Nexa blockchain.", "https://explorer.nexa.org", "nexa"],
 ["explorers", "Nordic Crypto Explorer", "Nexa explorer hosted by Nordic Crypto.", "https://explorer.nordiccrypto.no/nexa/", "nordic"],
 ["explorers", "Nexa Halving", "Countdown and stats for the next Nexa halving.", "https://halving.nexa.org", "nexa"],
+["explorers", "NexaScan", "Nexa block explorer: blocks, transactions, addresses, tokens, NFTs, rich list, Hodl vaults and mining pools.", "https://nexascan-alpha.vercel.app/#/", "nexascan"],
 ["exchanges", "CoinEx", "Spot trading for NEXA/USDT.", "https://www.coinex.com/en/exchange/nexa-usdt", "coinex"],
 ["exchanges", "BitMart", "Spot trading for NEXA/USDT.", "https://www.bitmart.com/trade/en-US?symbol=NEXA_USDT", "bitmart"],
 ["exchanges", "NonKYC", "No-KYC exchange with a NEXA/USDT market.", "https://www.nonkyc.io/market/NEXA_USDT", "nonkyc"],
