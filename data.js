@@ -52,7 +52,6 @@ const ENTRIES=[
 ["tokens", "NiftyArt", "Create and trade NFTs on Nexa.", "https://niftyart.cash/", ""],
 ["tokens", "Otoplo Tokenize", "Tool to create Nexa tokens.", "https://release.otoplo.com/tokenize/1.0.0/", "otoplo"],
 ["tokens", "Spaceport", "Nexa token and NFT tooling by 137.", "https://spaceport.onethirtyseven.dev/", ""],
-["tokens", "Nexaverse", "Nexa ecosystem project.", "https://nexaverse.io", "nexaverse"],
 ["community", "Nexa Telegram", "Main Nexa community chat.", "https://t.me/nexacoin", "nexa"],
 ["community", "Nexa Discord", "Official Nexa Discord server.", "https://discord.gg/tckf9vEN7j", "nexa"],
 ["community", "Nexa on X", "Official @NexaMoney account.", "https://x.com/NexaMoney", "nexa"],
