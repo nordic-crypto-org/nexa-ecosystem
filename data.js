@@ -17,6 +17,7 @@ const ENTRIES=[
 ["exchanges", "NonKYC", "No-KYC exchange with a NEXA/USDT market.", "https://www.nonkyc.io/market/NEXA_USDT", "nonkyc"],
 ["exchanges", "CoinGecko", "NEXA price, volume and market listings.", "https://www.coingecko.com/en/coins/nexa", "coingecko"],
 ["exchanges", "CoinMarketCap", "NEXA price, market cap and exchange list.", "https://coinmarketcap.com/currencies/nexa/", "cmc"],
+["exchanges", "Nebula Markets", "Marketplace for Nexa tokens and NFTs: utility, digital art, gaming, profile pictures and more.", "https://nebula.markets/", "nebula"],
 ["mining", "Nexa mining guide", "Official overview of mining NEXA (NexaPow).", "https://nexa.org/mining", "nexa"],
 ["mining", "MiningPoolStats", "Live list of Nexa pools and network hashrate.", "https://miningpoolstats.stream/nexa", "mps"],
 ["mining", "F2Pool", "Large multi-coin pool with NEXA mining.", "https://www.f2pool.com/coin/nexa", "f2pool"],
