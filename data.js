@@ -19,7 +19,7 @@ const ENTRIES=[
 ["exchanges", "CoinGecko", "NEXA price, volume and market listings.", "https://www.coingecko.com/en/coins/nexa", "coingecko"],
 ["exchanges", "CoinMarketCap", "NEXA price, market cap and exchange list.", "https://coinmarketcap.com/currencies/nexa/", "cmc"],
 ["exchanges", "Nebula Markets", "Marketplace for Nexa tokens and NFTs: utility, digital art, gaming, profile pictures and more.", "https://nebula.markets/", "nebula"],
-["exchanges", "Nekkha", "Third-party program offering 3–6% annual interest on deposited NEXA (1,000,000 NEXA minimum, 30-day lock-in).", "https://nekkha.com/", "nekkha"],
+["exchanges", "Nekkha", "Third-party deposit program promising 3–6% yearly on locked NEXA (1M minimum, 30-day lock). ⚠️ High risk: Nexa is proof-of-work with no native staking, so any yield is paid by the operator; anonymous team, unexplained yield source. Not endorsed.", "https://nekkha.com/", "nekkha", "warn"],
 ["mining", "Nexa mining guide", "Official overview of mining NEXA (NexaPow).", "https://nexa.org/mining", "nexa"],
 ["mining", "MiningPoolStats", "Live list of Nexa pools and network hashrate.", "https://miningpoolstats.stream/nexa", "mps"],
 ["mining", "F2Pool", "Large multi-coin pool with NEXA mining.", "https://www.f2pool.com/coin/nexa", "f2pool"],
