@@ -17,3 +17,4 @@ a.card:hover{border-color:var(--gold);transform:translateY(-2px)}.card h3{margin
 .card span{font-size:.78rem;color:var(--gold);word-break:break-all}.soon{opacity:.75;border-style:dashed}#empty{text-align:center;color:var(--muted)}
 footer{background:var(--teal);color:#d8dfe1;text-align:center;padding:24px 16px;margin-top:40px;font-size:.9rem}footer nav{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:8px}footer nav a{color:var(--gold);text-decoration:none}
 @media(max-width:600px){h1{font-size:1.8rem}}
+.hero .note{font-size:.85rem;opacity:.8;margin-top:6px}footer .disclaimer{max-width:760px;margin:0 auto 8px;font-size:.82rem;line-height:1.45}footer .disclaimer a{color:var(--gold)}

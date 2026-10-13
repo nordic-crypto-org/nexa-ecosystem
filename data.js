@@ -54,7 +54,6 @@ const ENTRIES=[
 ["community","Nexa Forum","Official discussion forum.","https://forum.nexa.org/"],
 ["community","Nexa YouTube","Videos and updates.","https://www.youtube.com/@NexaCoin"],
 ["community","Nordic Crypto Telegram","Nordic Crypto community chat.","https://t.me/nordiccryptochat"],
-["news","Nordic Crypto","News and guides from Nordic Crypto.","https://nordiccrypto.no"],
 ["news","Nexa Whitepaper","The Nexa whitepaper.","https://www.nexa.org/whitepaper"],
 ["news","Nexa Ecosystem page","Official ecosystem overview.","https://nexa.org/ecosystem"],
 ["news","Nexa Wallets page","Official guide to Nexa wallets.","https://nexa.org/wallets"],
