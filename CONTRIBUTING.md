@@ -10,7 +10,7 @@ Want your Nexa project listed? Open a pull request.
 ## Entry format
 
 ```js
-["category", "Name", "One short, neutral sentence describing the project.", "https://official-url/", "logo-key"],
+["category", "Name", "One short, neutral sentence describing the project.", "https://official-url/", "logo-key", {x:"https://x.com/example", telegram:"https://t.me/example"}],
 ```
 
 - **category**: one of the keys below.
@@ -18,6 +18,13 @@ Want your Nexa project listed? Open a pull request.
 - **Description**: one factual sentence. No marketing claims, prices or promises.
 - **URL**: the official HTTPS link. No referral or affiliate links.
 - **logo-key**: the file name (without `.png`) in `assets/logos/`. Use `""` to show an initials placeholder.
+- **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object.
+
+## Social links
+
+Add a `social` object only for accounts you can verify from the project's own website, GitHub, GitLab, or an official announcement. Leave a key out when you cannot verify it. Do not guess.
+
+Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medium`, `website`.
 
 ## Categories
 
