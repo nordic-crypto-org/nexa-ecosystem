@@ -59,6 +59,7 @@ const ENTRIES=[
 ["community", "Nexa YouTube", "Videos and updates.", "https://www.youtube.com/@NexaCoin", "nexa"],
 ["community", "Nexa Instagram", "Official Nexa Instagram account.", "https://www.instagram.com/nexacoin/", "nexa"],
 ["community", "Nexa TikTok", "Official Nexa TikTok account.", "https://www.tiktok.com/@nexacoin", "nexa"],
+["community", "Nexa Signal", "Independent community Telegram channel that raises awareness of Nexa through weekly content challenges (articles, videos, dApp demos), funded by community donations. Not affiliated with or endorsed by the Nexa team or Bitcoin Unlimited.", "https://t.me/bynexasignal", "nexasignal"],
 ["community", "🇨🇳 Nexa Chinese Telegram", "Chinese Nexa community chat (@Nexa_China).", "https://t.me/Nexa_China", ""],
 ["community", "🇳🇱 Nexa Dutch Telegram", "Dutch Nexa community chat (@Nexa_Netherlands).", "https://t.me/Nexa_Netherlands", ""],
 ["community", "🇩🇪 Nexa German Telegram", "German Nexa community chat (@Nexa_Germany).", "https://t.me/Nexa_Germany", ""],
