@@ -56,7 +56,7 @@ const ENTRIES=[
 ["developers", "Nexa Developer Support", "Telegram group for Nexa developer questions and help.", "https://t.me/nexa_dev", "nexa", {telegram:"https://t.me/nexa_dev",website:"https://nexa.org/build"}],
 ["developers", "Tailstorm stormtest live", "Live view of the Tailstorm stormtest testnet: subblock DAG, summary blocks and reward split.", "https://jqrgen.com/presentations/tailstorm/", "stormtest", {}],
 ["tokens", "NiftyArt", "Create and trade NFTs on Nexa.", "https://niftyart.cash/", "", {}],
-["tokens", "Otoplo Tokenize", "Tool to create Nexa tokens.", "https://release.otoplo.com/tokenize/1.0.0/", "otoplo", {telegram:"https://t.me/otoplo",gitlab:"https://gitlab.com/nexa/otoplo/otoplo-wallet/otoplo-wallet",website:"https://otoplo.com"}],
+["tokens", "Otoplo Tokenize", "Non-custodial desktop app to create Nexa tokens. ⚠️ No longer developed.", "https://release.otoplo.com/tokenize/1.0.0/", "otoplo", {telegram:"https://t.me/otoplo",gitlab:"https://gitlab.com/nexa/otoplo/otoplo-wallet/otoplo-wallet",website:"https://otoplo.com"}],
 ["tokens", "Native USD (NUSD)", "USD-denominated token on Nexa; view supply and transfers on the Nexa Explorer.", "https://explorer.nexa.org/token/nexa:trm9zcajh900a02t8fmqklw99uflcvcd6antut98asxfxlq4rcqqqdw80lls5", "", {}],
 ["tokens", "Chronicles of Agnar", "Story site for the AGNAR and DVOR tokens on Nexa, with token info, faucet distributions and a game.", "https://agnar.pages.dev/", "", {}],
 ["community", "VotePeer", "Censorship-resistant elections on the Nexa blockchain by Bitcoin Unlimited; anyone can check the result.", "https://votepeer-nexa.web.app/#/", "bu", {gitlab:"https://gitlab.com/nexa/votepeer",website:"https://bitcoinunlimited.info"}],
