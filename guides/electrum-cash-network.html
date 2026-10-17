@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Using @electrum-cash/network with Nexa — Nordic Crypto</title><meta name="description" content="Connect the @electrum-cash/network JavaScript library to a Nexa Rostrum server.">
+<link rel="icon" href="../assets/favicon.ico"><link rel="stylesheet" href="../style.css">
+<script>document.documentElement.dataset.theme=localStorage.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')</script>
+<style>.guide{max-width:760px}.guide h1{font-size:1.8rem}pre{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font-size:.9rem}code{font-family:ui-monospace,Menlo,Consolas,monospace}</style></head>
+<body><header><a class="brand" href="../"><img src="../assets/shield.svg" alt="" width="34" height="40"><span>Nordic Crypto</span></a></header>
+<main class="guide"><p><a href="../">← Nexa Ecosystem</a></p>
+<h1>Using @electrum-cash/network with Nexa</h1>
+<p><a href="https://gitlab.com/electrum-cash/network">@electrum-cash/network</a> is a generic Electrum-protocol client for JavaScript. Version 4.4.8 works unchanged against Nexa's Rostrum servers, including the <code>token.*</code> calls.</p>
+<ul><li>Passing only a hostname uses the BCH default port (50004) and fails. Create the socket yourself with <code>@electrum-cash/web-socket</code> on port <code>20004</code>.</li>
+<li>Use <code>useBigInt: true</code> so 64-bit token amounts are not rounded.</li>
+<li>Endpoints on <code>electrum.nexa.org</code>: WSS 20004, WS 20003, TLS 20002, TCP 20001 (TCP/TLS via <code>@electrum-cash/tcp-socket</code>).</li></ul>
+<pre><code>npm install @electrum-cash/network @electrum-cash/web-socket</code></pre>
+<pre><code>import { ElectrumClient } from '@electrum-cash/network';
+import { ElectrumWebSocket } from '@electrum-cash/web-socket';
+
+const NEXA_GENESIS = 'edc7144fe1ba4edd0edf35d7eea90f6cb1dba42314aa85da8207e97c5339c801';
+const socket = new ElectrumWebSocket('electrum.nexa.org', { port: 20004 });
+const client = new ElectrumClient('my-app', '1.4', socket, { useBigInt: true });
+await client.connect();
+
+const features = await client.request('server.features');
+console.log('Nexa mainnet:', features.genesis_hash === NEXA_GENESIS);
+console.log(await client.request('blockchain.address.get_balance', 'nexa:nqcqq9zxrtf9pqwtqyvaqdpctlc4fjxn444a6as5lun7vu0aw04cgk2k872qccv3lzcgnct9q06qxysqdpqxkpwy'));
+console.log(await client.request('token.genesis.info', 'nexa:trm9zcajh900a02t8fmqklw99uflcvcd6antut98asxfxlq4rcqqqdw80lls5'));
+await client.disconnect();</code></pre>
+<p>Failed calls resolve to an <code>Error</code> instance instead of throwing, so check <code>result instanceof Error</code>.</p>
+</main></body></html>
