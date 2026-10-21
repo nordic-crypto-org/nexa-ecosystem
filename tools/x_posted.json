@@ -1,0 +1,442 @@
+{
+ "https://wallywallet.org/": {
+  "name": "Wally Wallet",
+  "post_id": null,
+  "at": null
+ },
+ "https://play.google.com/store/apps/details?id=info.bitcoinunlimited.www.wally": {
+  "name": "Wally on Google Play",
+  "post_id": null,
+  "at": null
+ },
+ "https://apps.apple.com/us/app/wally-nexa-wallet/id6469619075": {
+  "name": "Wally on App Store",
+  "post_id": null,
+  "at": null
+ },
+ "https://otoplo.com/wallets": {
+  "name": "Otoplo Wallet",
+  "post_id": null,
+  "at": null
+ },
+ "https://wallet.otoplo.com/": {
+  "name": "Otoplo Web Wallet",
+  "post_id": null,
+  "at": null
+ },
+ "https://play.google.com/store/apps/details?id=com.otoplo.owallet": {
+  "name": "Otoplo on Google Play",
+  "post_id": null,
+  "at": null
+ },
+ "https://apps.apple.com/us/app/otoplo-nexa-wallet/id6450000648": {
+  "name": "Otoplo on App Store",
+  "post_id": null,
+  "at": null
+ },
+ "https://onekey.so/cryptos/6732da7f339780347c6f0e36/": {
+  "name": "OneKey",
+  "post_id": null,
+  "at": null
+ },
+ "https://spaceport.onethirtyseven.dev/": {
+  "name": "Spaceport",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.nexa.org/node": {
+  "name": "Full node",
+  "post_id": null,
+  "at": null
+ },
+ "https://explorer.nexa.org": {
+  "name": "Nexa Explorer",
+  "post_id": null,
+  "at": null
+ },
+ "https://explorer.nordiccrypto.no/nexa/": {
+  "name": "Nordic Crypto Explorer",
+  "post_id": null,
+  "at": null
+ },
+ "https://halving.nexa.org": {
+  "name": "Nexa Halving",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexascan-alpha.vercel.app/#/": {
+  "name": "NexaScan",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.coinex.com/en/exchange/nexa-usdt": {
+  "name": "CoinEx",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.bitmart.com/trade/en-US?symbol=NEXA_USDT": {
+  "name": "BitMart",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.nonkyc.io/market/NEXA_USDT": {
+  "name": "NonKYC",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.coingecko.com/en/coins/nexa": {
+  "name": "CoinGecko",
+  "post_id": null,
+  "at": null
+ },
+ "https://coinmarketcap.com/currencies/nexa/": {
+  "name": "CoinMarketCap",
+  "post_id": null,
+  "at": null
+ },
+ "https://nebula.markets/": {
+  "name": "Nebula Markets",
+  "post_id": null,
+  "at": null
+ },
+ "https://cryptocurrencycheckout.com/coin/nexa": {
+  "name": "CryptocurrencyCheckout",
+  "post_id": null,
+  "at": null
+ },
+ "https://nekkha.com/": {
+  "name": "Nekkha",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexa.org/mining": {
+  "name": "Nexa mining guide",
+  "post_id": null,
+  "at": null
+ },
+ "https://miningpoolstats.stream/nexa": {
+  "name": "MiningPoolStats",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.f2pool.com/coin/nexa": {
+  "name": "F2Pool",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.woolypooly.com/en/coin/nexa": {
+  "name": "WoolyPooly",
+  "post_id": null,
+  "at": null
+ },
+ "https://acc-pool.pw": {
+  "name": "ACC Pool",
+  "post_id": null,
+  "at": null
+ },
+ "https://github.com/Lolliedieb/lolMiner-releases": {
+  "name": "lolMiner",
+  "post_id": null,
+  "at": null
+ },
+ "https://github.com/bzminer/bzminer": {
+  "name": "BzMiner",
+  "post_id": null,
+  "at": null
+ },
+ "https://github.com/rigelminer/rigel/releases": {
+  "name": "Rigel",
+  "post_id": null,
+  "at": null
+ },
+ "https://github.com/andru-kun/wildrig-multi": {
+  "name": "WildRig Multi",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/nexa_mining": {
+  "name": "Nexa Mining Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://pool.rplant.xyz/": {
+  "name": "Rplant Pool",
+  "post_id": null,
+  "at": null
+ },
+ "https://minerstat.com/coin/NEX": {
+  "name": "minerstat",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.minerkeeper.org/": {
+  "name": "Miner Keeper",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexa.org": {
+  "name": "nexa.org",
+  "post_id": null,
+  "at": null
+ },
+ "https://spec.nexa.org": {
+  "name": "Nexa Specification",
+  "post_id": null,
+  "at": null
+ },
+ "https://build.nexa.org/": {
+  "name": "build.nexa.org",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa": {
+  "name": "Nexa on GitLab",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/nexa": {
+  "name": "Nexa full node source",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/bitcoinunlimited/rostrum": {
+  "name": "Rostrum",
+  "post_id": null,
+  "at": null
+ },
+ "https://tokenapi.bitcoinunlimited.info/swagger-ui/index.html": {
+  "name": "Nexa Token API (Bitcoin Unlimited)",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/nexa/-/tree/dev/src/libnexa": {
+  "name": "libnexa",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/libnexa-js": {
+  "name": "libnexa-js",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/libnexakotlin": {
+  "name": "libnexakotlin",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/wallet-sdk-ts": {
+  "name": "wallet-sdk-ts",
+  "post_id": null,
+  "at": null
+ },
+ "https://testnet-faucet.nexa.org/": {
+  "name": "Testnet faucet",
+  "post_id": null,
+  "at": null
+ },
+ "https://faucet.nexa.org": {
+  "name": "Mainnet faucet",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/nexa/-/tree/dev/src/cashlib": {
+  "name": "CashLib",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/nexaaiskills": {
+  "name": "Nexa AI skills",
+  "post_id": null,
+  "at": null
+ },
+ "https://debug.nexa.org/": {
+  "name": "NexaVM Debugger",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexscript.org/": {
+  "name": "NexScript",
+  "post_id": null,
+  "at": null
+ },
+ "https://gitlab.com/nexa/npl": {
+  "name": "NPL",
+  "post_id": null,
+  "at": null
+ },
+ "guides/electrum-cash-network.html": {
+  "name": "@electrum-cash/network",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/nexa_dev": {
+  "name": "Nexa Developer Support",
+  "post_id": null,
+  "at": null
+ },
+ "https://jqrgen.com/presentations/tailstorm/": {
+  "name": "Tailstorm stormtest live",
+  "post_id": null,
+  "at": null
+ },
+ "https://niftyart.cash/": {
+  "name": "NiftyArt",
+  "post_id": null,
+  "at": null
+ },
+ "https://release.otoplo.com/tokenize/1.0.0/": {
+  "name": "Otoplo Tokenize",
+  "post_id": null,
+  "at": null
+ },
+ "https://explorer.nexa.org/token/nexa:trm9zcajh900a02t8fmqklw99uflcvcd6antut98asxfxlq4rcqqqdw80lls5": {
+  "name": "Native USD (NUSD)",
+  "post_id": null,
+  "at": null
+ },
+ "https://agnar.pages.dev/": {
+  "name": "Chronicles of Agnar",
+  "post_id": null,
+  "at": null
+ },
+ "https://votepeer-nexa.web.app/#/": {
+  "name": "VotePeer",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/nexacoin": {
+  "name": "Nexa Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://discord.gg/tckf9vEN7j": {
+  "name": "Nexa Discord",
+  "post_id": null,
+  "at": null
+ },
+ "https://x.com/NexaMoney": {
+  "name": "Nexa on X",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.reddit.com/r/Nexa/": {
+  "name": "r/Nexa",
+  "post_id": null,
+  "at": null
+ },
+ "https://forum.nexa.org/": {
+  "name": "Nexa Forum",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.youtube.com/@NexaCoin": {
+  "name": "Nexa YouTube",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.instagram.com/nexacoin/": {
+  "name": "Nexa Instagram",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.tiktok.com/@nexacoin": {
+  "name": "Nexa TikTok",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/bynexasignal": {
+  "name": "Nexa Signal",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_China": {
+  "name": "🇨🇳 Nexa Chinese Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Netherlands": {
+  "name": "🇳🇱 Nexa Dutch Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Germany": {
+  "name": "🇩🇪 Nexa German Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_India": {
+  "name": "🇮🇳 Nexa Indian Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Korean": {
+  "name": "🇰🇷 Nexa Korean Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_NOR": {
+  "name": "🇳🇴 Nexa Norwegian Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Philippines": {
+  "name": "🇵🇭 Nexa Philippines Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Poland": {
+  "name": "🇵🇱 Nexa Polish Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_RU": {
+  "name": "🇷🇺 Nexa Russian Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_Spanish": {
+  "name": "🇪🇸 Nexa Spanish Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/NexaTR": {
+  "name": "🇹🇷 Nexa Turkish Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://t.me/Nexa_VIET": {
+  "name": "🇻🇳 Nexa Vietnamese Telegram",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.nexa.org/whitepaper": {
+  "name": "Nexa Whitepaper",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexa.org/ecosystem": {
+  "name": "Nexa Ecosystem page",
+  "post_id": null,
+  "at": null
+ },
+ "https://nexa.org/wallets": {
+  "name": "Nexa Wallets page",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.bitcoinunlimited.info/": {
+  "name": "Bitcoin Unlimited",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.nexa.org/roadmap": {
+  "name": "Nexa Roadmap",
+  "post_id": null,
+  "at": null
+ },
+ "https://www.youtube.com/watch?v=pDRCWcw5sAU": {
+  "name": "Signature Scaling Via Hardware",
+  "post_id": null,
+  "at": null
+ }
+}
