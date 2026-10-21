@@ -20,7 +20,7 @@ def slug(s):
 
 def one_line(desc, limit=200):
     s = re.split(r"(?<=[.!?])\s", desc.strip())[0]
-    return s if len(s) <= limit else s[:limit - 1].rstrip() + "…"
+    return s if len(s) <= limit else s[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
 
 
 def _pct(s):
