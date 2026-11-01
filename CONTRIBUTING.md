@@ -19,7 +19,7 @@ Want your Nexa project listed? Open a pull request.
 - **URL**: the official HTTPS link. No referral or affiliate links.
 - **logo-key**: the file name (without `.png`) in `assets/logos/`. Use `""` to show an initials placeholder.
 - **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object.
-- **network** (optional, in that object): `"testnet"` shows a Testnet badge.
+- **network** (optional, in that object): `"testnet"` shows a Testnet experiment badge.
 - **live** (optional, in that object): `false` keeps the entry off the public site until its URL returns HTTP 200. The live-check workflow then sets `live` to `true`.
 
 ## Social links
