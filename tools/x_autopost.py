@@ -11,7 +11,8 @@ JS = 'eval(require("fs").readFileSync(0,"utf8")+";process.stdout.write(JSON.stri
 
 def entries(src):
     out = json.loads(subprocess.run(["node", "-e", JS], input=src, capture_output=True, text=True, check=True).stdout)
-    return [{"name": e[1], "desc": e[2], "url": e[3]} for e in out if len(e) > 3 and e[3]]
+    return [{"name": e[1], "desc": e[2], "url": e[3]} for e in out
+            if len(e) > 3 and e[3] and not (isinstance(e[-1], dict) and e[-1].get("live") is False)]
 
 
 def slug(s):
