@@ -19,6 +19,8 @@ Want your Nexa project listed? Open a pull request.
 - **URL**: the official HTTPS link. No referral or affiliate links.
 - **logo-key**: the file name (without `.png`) in `assets/logos/`. Use `""` to show an initials placeholder.
 - **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object.
+- **network** (optional, in that object): `"testnet"` shows a Testnet badge.
+- **live** (optional, in that object): `false` keeps the entry off the public site until its URL returns HTTP 200. The live-check workflow then sets `live` to `true`.
 
 ## Social links
 
@@ -48,6 +50,6 @@ Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medi
 
 ## Rules
 
-- The project must be live, related to Nexa, and its link must load.
+- The project must be related to Nexa. A public listing must load. An entry with `live: false` can be added before its URL responds; it is not shown until it does.
 - Being listed is not an endorsement. Maintainers may edit or decline entries, and may remove dead or abandoned links.
 - Prefer a pull request. If you can't make one, [open an issue](https://github.com/nordic-crypto-org/nexa-ecosystem/issues) instead.
