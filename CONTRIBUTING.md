@@ -18,7 +18,7 @@ Want your Nexa project listed? Open a pull request.
 - **Description**: one factual sentence. No marketing claims, prices or promises.
 - **URL**: the official HTTPS link. No referral or affiliate links.
 - **logo-key**: the file name (without `.png`) in `assets/logos/`. Use `""` to show an initials placeholder.
-- **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object.
+- **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object. Wallet cards may also include official `appstore`, `play`, and `download` URLs in that object (App Store, Google Play, and a direct-download page). Only add a key when the URL is the project's own official link, with tracking parameters removed. Omit `download` when the official site does not advertise a direct download.
 - **network** (optional, in that object): `"testnet"` shows a Testnet experiment badge.
 - **live** (optional, in that object): `false` keeps the entry off the public site until its URL returns HTTP 200. The live-check workflow then sets `live` to `true`.
 
@@ -26,7 +26,7 @@ Want your Nexa project listed? Open a pull request.
 
 Add a `social` object only for accounts you can verify from the project's own website, GitHub, GitLab, or an official announcement. Leave a key out when you cannot verify it. Do not guess.
 
-Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medium`, `website`.
+Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medium`, `website`. Optional store keys (same object, official URLs only): `appstore`, `play`, `download`.
 
 ## Categories
 
