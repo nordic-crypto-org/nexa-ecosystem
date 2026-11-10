@@ -8,8 +8,11 @@ const ITEMS=ENTRIES.map(parseEntry).filter(e=>e.live);
 $("#cats").innerHTML=`<button data-c="all" class="on">All (${ITEMS.length})</button>`+Object.entries(CATEGORIES).map(([k,v])=>`<button data-c="${k}">${v} (${ITEMS.filter(e=>e.cat==k).length})</button>`).join("")+`<button data-c="libraries">Libraries</button>`;
 $("#cats").onclick=e=>{const b=e.target.closest("button");if(!b)return;cat=b.dataset.c;document.querySelectorAll("#cats button").forEach(x=>x.classList.toggle("on",x==b));render();if(cat=="libraries")$("#libtree")?.scrollIntoView({behavior:"smooth",block:"start"})};
 $("#q").oninput=render;
-function initials(name){return esc(name.replace(/[^\p{L}\p{N} ]/gu,"").trim().split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase())}
-function logoHTML(name,logo){const ph=`<span class="logo ph" aria-hidden="true">${initials(name)}</span>`;return logo?`<img class="logo" src="assets/logos/${esc(logo)}.png" alt="" width="32" height="32" loading="lazy" onerror="this.outerHTML='${ph}'">`:ph}
+function initialsText(name){return name.replace(/[^\p{L}\p{N} ]/gu,"").trim().split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("").toUpperCase()}
+function initials(name){return esc(initialsText(name))}
+function logoPlaceholder(name){return `<span class="logo ph" aria-hidden="true">${initials(name)}</span>`}
+function logoHTML(name,logo){return logo?`<img class="logo" src="assets/logos/${esc(logo)}.png" alt="" width="32" height="32" loading="lazy" data-initials="${esc(initialsText(name))}">`:logoPlaceholder(name)}
+function bindLogoFallbacks(root){root.querySelectorAll("img.logo[data-initials]").forEach(img=>{const swap=()=>{if(!img.isConnected)return;const span=document.createElement("span");span.className="logo ph";span.setAttribute("aria-hidden","true");span.textContent=img.getAttribute("data-initials")||"";img.replaceWith(span)};img.addEventListener("error",swap);if(img.complete&&img.naturalWidth===0)swap()})}
 function socialBar(name,social){const links=SOCIALS.filter(([k])=>social&&social[k]).map(([k,label])=>{const tip=esc(name+" on "+label);return `<a href="${esc(social[k])}" target="_blank" rel="noopener" aria-label="${tip}" title="${tip}"><svg aria-hidden="true" width="16" height="16"><use href="#i-${k}"/></svg></a>`}).join("");return links?`<div class="card-social">${links}</div>`:""}
 function storeBar(e){const btns=[["appstore","App Store",e.appstore],["play","Google Play",e.play],["download","Direct download",e.download]].filter(([, ,u])=>u).map(([k,label,u])=>`<a class="store-btn store-${k}" href="${esc(u)}" target="_blank" rel="noopener">${esc(label)}</a>`).join("");return btns?`<div class="card-stores">${btns}</div>`:""}
 function render(){const q=$("#q").value.toLowerCase().trim();let html="",n=0;
@@ -21,7 +24,7 @@ const items=ITEMS.filter(e=>e.cat==k&&(!q||(e.name+" "+e.desc+" "+e.url+" "+Obje
 html+=`<section><h2>${v}</h2><div class="grid">`+items.map(e=>{const {name,desc,url,logo,flag,network,social}=e;const ic=logoHTML(name,logo);const warn=flag=="warn";const badges=[warn?`<b class="badge">⚠️ High risk</b>`:"",network=="testnet"?`<b class="badge testnet">Testnet experiment</b>`:""].filter(Boolean).join("");const body=`${badges?`<span class="badges">${badges}</span>`:""}<h3>${ic}${esc(name)}</h3><p>${esc(desc)}</p>`;const extra=storeBar(e)+socialBar(name,social);return url?`<article id="${slug(name)}" class="card${warn?" warn":""}"><a class="card-main" href="${esc(url)}" target="_blank" rel="noopener">${body}<span>${esc(url.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,"").slice(0,48))}</span></a>${extra}</article>`:`<article id="${slug(name)}" class="card soon">${body}<span>Coming soon</span>${extra}</article>`}).join("")+`</div></section>`}
 }
 if(showLibs){const tree=typeof LIB_TREE!=="undefined"?LIB_TREE:null;if(tree){const qn=q;const nodes=tree.nodes.filter(n=>!qn||(n.name+" "+(n.note||"")).toLowerCase().includes(qn));const idset=new Set(nodes.map(n=>n.id));const edges=tree.edges.filter(e=>idset.has(e.from)&&idset.has(e.to));if(nodes.length){n+=nodes.length;html+=renderLibTree(tree,nodes,edges)}}}
-$("#list").innerHTML=html;$("#empty").hidden=n>0}
+$("#list").innerHTML=html;bindLogoFallbacks($("#list"));$("#empty").hidden=n>0}
 function nodeById(nodes,id){return nodes.find(n=>n.id==id)}
 function renderLibTree(tree,nodes,edges){
 const byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
