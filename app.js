@@ -28,11 +28,46 @@ const byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
 const logo=n=>logoHTML(n.name,n.logo||"");
 const nodeClass=n=>`lib-node${n.planned?" planned":""}${n.deprecated?" deprecated":""}`;
 const nodeInner=n=>{const badge=n.planned?`<b class="badge planned">Planned</b>`:n.deprecated?`<b class="badge">Deprecated</b>`:"";const title=`${logo(n)}<span>${esc(n.name)}</span>`;const head=n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${title}</a>`:`<span class="lib-name">${title}</span>`;return `${badge?`<span class="badges">${badge}</span>`:""}${head}${n.note?`<p>${esc(n.note)}</p>`:""}`};
-const edgeClass=e=>e.planned?"planned":e.verified?"verified":"unverified";
-const edgeLabel=e=>e.planned?"Planned":e.kind=="renamed"?"Renamed to":e.verified?"Depends on":"Unverified";
-const edgeList=edges.map(e=>{const a=byId[e.from],b=byId[e.to];if(!a||!b)return "";return `<li class="lib-edge ${edgeClass(e)}"><span class="lib-edge-from">${esc(a.name)}</span><span class="lib-edge-rel">${esc(edgeLabel(e))}</span><span class="lib-edge-to">${esc(b.name)}</span>${e.via?`<small>${esc(e.via)}</small>`:""}</li>`}).join("");
 const cards=nodes.map(n=>`<article class="card ${nodeClass(n)}" id="lib-${esc(n.id)}">${nodeInner(n)}</article>`).join("");
-return `<section id="libraries" class="lib-section"><h2>Libraries</h2><p class="lib-intro">${esc(tree.intro)}</p><p class="lib-legend"><span class="swatch verified"></span> Verified from a public source repo <span class="swatch unverified"></span> Unverified <span class="swatch planned"></span> Planned</p><div class="grid lib-grid">${cards}</div><h3 class="lib-edges-h">Dependencies, down to libnexa (C)</h3><ul class="lib-edges">${edgeList}</ul></section>`
+const forest=renderDepForest(nodes,edges,byId);
+const legend=`<p class="lib-legend"><span class="lib-legend-item"><span class="swatch verified"></span> Verified from a public source repo</span><span class="lib-legend-item"><span class="swatch unverified"></span> Unverified</span><span class="lib-legend-item"><span class="swatch planned"></span> Planned</span></p>`;
+const dep=forest?`<h3 id="lib-deps" class="lib-edges-h">Dependencies, down to libnexa (C)</h3>${legend}${forest}`:"";
+return `<section id="libraries" class="lib-section"><h2>Libraries</h2><p class="lib-intro">${esc(tree.intro)}</p><div class="grid lib-grid">${cards}</div>${dep}</section>`
+}
+// Renamed edges are a former name of the target, not a child. Other edges run from a dependent to the library it depends on, so dependents hang under that library. No edge is added that is not in the data.
+function renderDepForest(nodes,edges,byId){
+const children={},aliases={},isChild=new Set();
+for(const e of edges){
+const from=byId[e.from],to=byId[e.to];
+if(!from||!to)continue;
+if(e.kind=="renamed"){(aliases[e.to]||=[]).push({node:from,edge:e});continue}
+(children[e.to]||=[]).push({node:from,edge:e});
+isChild.add(e.from);
+}
+const order=new Map(nodes.map((n,i)=>[n.id,i]));
+const depth=id=>{const seen=new Set();const walk=x=>{if(seen.has(x))return 0;seen.add(x);const kids=children[x]||[];return kids.length?1+Math.max(...kids.map(k=>walk(k.node.id))):1};return walk(id)};
+const rootIds=[...new Set([...Object.keys(children),...Object.keys(aliases)])].filter(id=>byId[id]&&!isChild.has(id));
+rootIds.sort((a,b)=>depth(b)-depth(a)||order.get(a)-order.get(b));
+if(!rootIds.length)return "";
+const treeLogo=n=>{const ph=initials(n.name);if(!n.logo)return `<span class="logo ph" aria-hidden="true">${ph}</span>`;return `<img class="logo" src="assets/logos/${esc(n.logo)}.png" alt="" width="28" height="28" loading="lazy" data-ph="${ph}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo ph',textContent:this.dataset.ph}))">`};
+const aliasHTML=id=>(aliases[id]||[]).map(({node,edge})=>{
+const name=`<span>${esc(node.name)}</span>`;
+const head=node.url?`<a class="lib-tree-alias-name" href="${esc(node.url)}" target="_blank" rel="noopener">${treeLogo(node)}${name}</a>`:`<span class="lib-tree-alias-name">${treeLogo(node)}${name}</span>`;
+return `<div class="lib-tree-alias"><span class="lib-tree-rel">Former name</span>${head}${edge.via?`<small>${esc(edge.via)}</small>`:""}</div>`}).join("");
+const relText=(e,parent)=>e.planned?`Planned · ${parent.name}`:e.verified?`Depends on ${parent.name}`:`Unverified · ${parent.name}`;
+const nodeCard=(n,edge,parent)=>{
+const badge=n.planned?`<b class="badge planned">Planned</b>`:n.deprecated?`<b class="badge">Deprecated</b>`:"";
+const title=`${treeLogo(n)}<span class="lib-tree-label">${esc(n.name)}</span>${badge}`;
+const head=n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${title}</a>`:`<span class="lib-name">${title}</span>`;
+const cap=edge?`<p class="lib-tree-cap"><span class="lib-tree-rel">${esc(relText(edge,parent))}</span>${edge.via?`<small>${esc(edge.via)}</small>`:""}</p>`:"";
+return `<div class="lib-tree-node${n.planned?" planned":""}${n.deprecated?" deprecated":""}">${head}${aliasHTML(n.id)}${cap}</div>`};
+const branch=(id,path)=>{
+const kids=children[id]||[];
+if(!kids.length)return "";
+const ulCls=kids.every(k=>k.edge.planned)?"planned":kids.every(k=>!k.edge.verified&&!k.edge.planned)?"unverified":"verified";
+return `<ul class="${ulCls}">${kids.map(k=>{const cyc=path.has(k.node.id);const next=new Set(path);next.add(k.node.id);const cls=k.edge.planned?"planned":k.edge.verified?"verified":"unverified";return `<li class="${cls}">${nodeCard(k.node,k.edge,byId[id])}${cyc?"":branch(k.node.id,next)}</li>`}).join("")}</ul>`};
+const cols=rootIds.map(id=>{const n=byId[id];return `<div class="lib-tree-col"><ul class="lib-tree"><li class="lib-tree-root">${nodeCard(n,null,null)}${branch(id,new Set([id]))}</li></ul></div>`}).join("");
+return `<div class="lib-forest" role="group" aria-label="Library dependency trees">${cols}</div>`
 }
 render();
 if(location.hash)document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
