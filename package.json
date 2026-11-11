@@ -1,0 +1,10 @@
+{
+  "name": "nexa-ecosystem",
+  "private": true,
+  "scripts": {
+    "test": "node --test scripts/check-card-titles.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^25.0.1"
+  }
+}

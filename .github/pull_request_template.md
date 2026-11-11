@@ -1,7 +1,7 @@
 ## Listing
 
 - **Name:**
-- **Category:** <!-- wallets / explorers / exchanges / mining / developers / tokens / community / news -->
+- **Category:** <!-- wallets / payments / explorers / exchanges / mining / developers / tokens / community / news -->
 - **URL:**
 - **Relation to the project:** <!-- maintainer / user / other -->
 

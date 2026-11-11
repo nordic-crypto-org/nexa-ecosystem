@@ -20,7 +20,7 @@ Want your Nexa project listed? Open a pull request.
 - **logo-key**: the file name (without `.png`) in `assets/logos/`. Use `""` to show an initials placeholder.
 - **social** (optional): official accounts only. See below. A high-risk listing puts `"warn"` before this object. Wallet cards may also include official `appstore`, `play`, and `download` URLs in that object (App Store, Google Play, and a direct-download page). Only add a key when the URL is the project's own official link, with tracking parameters removed. Omit `download` when the official site does not advertise a direct download.
 - **network** (optional, in that object): `"testnet"` shows a Testnet experiment badge.
-- **live** (optional, in that object): `false` keeps the entry off the public site until its URL returns HTTP 200. The live-check workflow then sets `live` to `true`.
+- **live** (optional, in that object): `false` keeps the entry off the public site until its URL returns HTTP 200. Testnet entries show as "Coming soon" instead. The live-check workflow then sets `live` to `true`.
 
 ## Social links
 
@@ -33,6 +33,7 @@ Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medi
 | key | Section |
 |---|---|
 | `wallets` | Wallets |
+| `payments` | Payments & Commerce |
 | `explorers` | Explorers |
 | `exchanges` | Exchanges & Markets |
 | `mining` | Mining |

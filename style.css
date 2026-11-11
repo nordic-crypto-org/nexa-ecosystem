@@ -74,3 +74,4 @@ header{gap:12px;flex-wrap:wrap}.hdr-social{display:flex;align-items:center;gap:2
 @media(max-width:600px){.lib-tree{--tree-gap:12px}}
 
 .hero-more{margin:0 auto 16px!important}.hero-more a{color:var(--gold);font-weight:600;text-decoration:none}.hero-more a:hover{text-decoration:underline}
+section>.note{font-size:.85rem;opacity:.85;margin:0 0 12px}.hero .note a{color:var(--gold)}

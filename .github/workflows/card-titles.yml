@@ -1,0 +1,26 @@
+name: card titles
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths:
+      - app.js
+      - data.js
+      - index.html
+      - scripts/check-card-titles.mjs
+      - package.json
+      - package-lock.json
+      - .github/workflows/card-titles.yml
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm test
