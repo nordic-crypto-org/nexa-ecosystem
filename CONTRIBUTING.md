@@ -33,6 +33,7 @@ Keys: `x`, `telegram`, `discord`, `reddit`, `github`, `gitlab`, `youtube`, `medi
 | key | Section |
 |---|---|
 | `wallets` | Wallets |
+| `payments` | Payments & Commerce |
 | `explorers` | Explorers |
 | `exchanges` | Exchanges & Markets |
 | `mining` | Mining |
